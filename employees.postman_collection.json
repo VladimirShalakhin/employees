@@ -1,0 +1,158 @@
+{
+	"info": {
+		"_postman_id": "dc54a6f1-8908-4a65-8d5a-529d0a03f03a",
+		"name": "employees",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25132729"
+	},
+	"item": [
+		{
+			"name": "employee set time",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"hours\": \"3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://employees.local/api/v1/employee/:employee_id/time",
+					"protocol": "http",
+					"host": [
+						"employees",
+						"local"
+					],
+					"path": [
+						"api",
+						"v1",
+						"employee",
+						":employee_id",
+						"time"
+					],
+					"variable": [
+						{
+							"key": "employee_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "employee get unpaid",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"hours\": 8\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://employees.local/api/v1/employee/:employee_id/unpaid",
+					"protocol": "http",
+					"host": [
+						"employees",
+						"local"
+					],
+					"path": [
+						"api",
+						"v1",
+						"employee",
+						":employee_id",
+						"unpaid"
+					],
+					"variable": [
+						{
+							"key": "employee_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "employee pay all",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://employees.local/api/v1/employee/:employee_id/payall",
+					"protocol": "http",
+					"host": [
+						"employees",
+						"local"
+					],
+					"path": [
+						"api",
+						"v1",
+						"employee",
+						":employee_id",
+						"payall"
+					],
+					"variable": [
+						{
+							"key": "employee_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create employee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"test1@mail.com\",\r\n  \"password\": \"hardpassword\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://employees.local/api/v1/employee/create",
+					"protocol": "http",
+					"host": [
+						"employees",
+						"local"
+					],
+					"path": [
+						"api",
+						"v1",
+						"employee",
+						"create"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
